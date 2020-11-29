@@ -55,7 +55,7 @@ namespace Horibrary
 
         // 2 Dimensional Convolution Method from MATLAB, Porting in C# Simply. (conv2 / same)
         // Works Perfectly.
-        private double[,] Conv_2D(double[,] Dim1, double[,] Dim2)
+        private static double[,] Conv_2D(double[,] Dim1, double[,] Dim2)
         {
             int Dim1_H = Dim1.GetLength(0);
             int Dim1_W = Dim1.GetLength(1);
@@ -286,7 +286,7 @@ namespace Horibrary
             return Out;
         }
 
-        public List<object> EnergyResoltion(double[] Histo_Center, double[] Histo_Count)
+        public static List<object> EnergyResoltion(double[] Histo_Center, double[] Histo_Count)
         {
             List<object> Out = new List<object>();
 
