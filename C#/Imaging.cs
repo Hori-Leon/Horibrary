@@ -1,17 +1,6 @@
-﻿using Emgu.CV;
-using Emgu.CV.Stitching;
-using Emgu.CV.Structure;
-using Emgu.CV.Util;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace Horibrary
 {
