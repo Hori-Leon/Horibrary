@@ -1,6 +1,17 @@
+using Emgu.CV;
+using Emgu.CV.Stitching;
+using Emgu.CV.Structure;
+using Emgu.CV.Util;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Horibrary
 {
@@ -55,7 +66,7 @@ namespace Horibrary
 
         // 2 Dimensional Convolution Method from MATLAB, Porting in C# Simply. (conv2 / same)
         // Works Perfectly.
-        private static double[,] Conv_2D(double[,] Dim1, double[,] Dim2)
+        private double[,] Conv_2D(double[,] Dim1, double[,] Dim2)
         {
             int Dim1_H = Dim1.GetLength(0);
             int Dim1_W = Dim1.GetLength(1);
@@ -286,7 +297,7 @@ namespace Horibrary
             return Out;
         }
 
-        public static List<object> EnergyResoltion(double[] Histo_Center, double[] Histo_Count)
+        public List<object> EnergyResoltion(double[] Histo_Center, double[] Histo_Count)
         {
             List<object> Out = new List<object>();
 
